@@ -1,0 +1,61 @@
+package StepDefination;
+
+
+import org.openqa.selenium.By;
+
+import com.orangeHRM.base.BaseFuntions;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import junit.framework.Assert;
+
+
+public class LoginTest extends BaseFuntions  
+{
+
+	@Before
+	public void lunchBrowser() throws Exception
+	{
+		System.out.println("==========================called");
+		initialization();
+		
+	}
+	
+	@After
+	public void cloaseBrowser() throws Exception
+	{
+		tearDown();
+	}
+	
+	@Given("^user alredy on login page$")
+	public void user_alredy_on_login_page()
+	{
+		String titleLogin = driver.getTitle();
+		System.out.println(titleLogin);
+		Assert.assertEquals("OrangeHRM", titleLogin);
+	}
+
+	@Then("^user enter \"(.*)\" and \"(.*)\"$")
+	public void user_enter_username_and_Passsword(String userName,String password)
+	{
+		driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys(userName);
+		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys(password);
+		
+	}
+
+	@Then("^user clicks on login button$")
+	public void user_clicks_on_login_button()
+	{
+		driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
+	}
+
+	@Then("^user on admin home page$")
+	public void user_on_admin_home_page()
+	{
+		boolean result = driver.findElement(By.xpath("//a[@id='welcome']")).isDisplayed();//
+		Assert.assertTrue("user in admin home page", result);
+	}
+
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="57.24846">
+<testcase classname="OHRM login feature" name="Verify login functionality" time="15.4871">
+<system-out><![CDATA[Given user alredy on login page.............................................passed
+When title of page is OrangeHRM.............................................passed
+Then user enter "Admin" and "Admin".........................................passed
+Then user clicks on login button............................................passed
+Then user on admin home page................................................passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All the navigations" name="Verufy all the navigation of the Orange HRM" time="41.76136">
+<failure message="org.openqa.selenium.TimeoutException: timeout&#10;  (Session info: chrome=71.0.3578.98)&#10;  (Driver info: chromedriver=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'&#10;System info: host: 'OJAS00063', ip: '192.168.2.59', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54325}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb), userDataDir=C:\Users\chprasad\AppData\Local\Temp\scoped_dir5000_25040}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 80957bf414cb676d42871416c8c2e425&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)&#13;&#10;&#9;at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)&#13;&#10;&#9;at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)&#13;&#10;&#9;at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)&#13;&#10;&#9;at StepDefination.Navigations.user_click_on_Directory_page(Navigations.java:142)&#13;&#10;&#9;at ✽.Then user click on Directory page(Navigations.feature:19)&#13;&#10;"><![CDATA[Given user should login with valid credentials..............................passed
+When user is on home page...................................................passed
+Then user click on admin module.............................................passed
+Then user verify admin page.................................................passed
+Then user click on PIM......................................................passed
+Then user verify PIM page...................................................passed
+Then user click on Leave page...............................................passed
+Then user verify Leave page.................................................passed
+Then user click on Time page................................................passed
+Then user verify Time page..................................................passed
+Then user click on Recruitment page.........................................passed
+Then user verify Recruitment page...........................................passed
+Then user click on Directory page...........................................failed
+Then user verify Directory page.............................................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'OJAS00063', ip: '192.168.2.59', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54325}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb), userDataDir=C:\Users\chprasad\AppData\Local\Temp\scoped_dir5000_25040}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 80957bf414cb676d42871416c8c2e425
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at StepDefination.Navigations.user_click_on_Directory_page(Navigations.java:142)
+	at ✽.Then user click on Directory page(Navigations.feature:19)
+]]></failure>
+</testcase>
+</testsuite>

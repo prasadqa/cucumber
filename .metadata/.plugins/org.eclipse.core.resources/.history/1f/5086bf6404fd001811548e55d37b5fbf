@@ -1,0 +1,62 @@
+package StepDefination;
+
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+public class LoginTest 
+{
+	WebDriver driver;
+	
+	@Given("^user alredy on login page$")
+	public void user_alredy_on_login_page()
+	{
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+	  
+	}
+
+	@When("^title of page is OrangeHRM$")
+	public void title_of_page_is()
+	{
+		String titleLogin = driver.getTitle();
+		System.out.println(titleLogin);
+		Assert.assertEquals("OrangeHRM", titleLogin);
+	}
+
+	@Then("^user enter username and Passsword$")
+	public void user_enter_username_and_Passsword()
+	{
+		driver.findElement(By.xpath("")).sendKeys("");
+		driver.findElement(By.xpath("")).sendKeys("");
+		
+	}
+
+	@Then("^user clicks on login button$")
+	public void user_clicks_on_login_button()
+	{
+		driver.findElement(By.xpath("")).click();
+	}
+
+	@Then("^user on admin home page$")
+	public void user_on_admin_home_page()
+	{
+		
+	}
+
+	
+}

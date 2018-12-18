@@ -1,0 +1,56 @@
+package StepDefination;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+public class LoginTest 
+{
+	WebDriver driver;
+	
+	@Given("^user alredy on login page$")
+	public void user_alredy_on_login_page()
+	{
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.findElement(By.xpath("")).sendKeys("");
+		driver.findElement(By.xpath("")).sendKeys("");
+		driver.findElement(By.xpath("")).click();
+		
+	   
+	}
+
+	@When("^title of page is OrangeHRM$")
+	public void title_of_page_is()
+	{
+		String title = driver.getTitle();
+		System.out.println(title);
+		Assert.assertEquals("OrangeHRM", title);
+	}
+
+	@Then("^user enter username and Passsword$")
+	public void user_enter_username_and_Passsword(){
+	   
+	}
+
+	@Then("^user clicks on login button$")
+	public void user_clicks_on_login_button(){
+	 
+	}
+
+	@Then("^user on admin home page$")
+	public void user_on_admin_home_page(){
+		
+	}
+
+	
+}

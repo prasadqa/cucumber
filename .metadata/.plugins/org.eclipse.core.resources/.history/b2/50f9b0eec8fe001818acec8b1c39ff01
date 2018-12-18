@@ -1,0 +1,19 @@
+package StepDefination;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LogOutMethod 
+{
+	WebDriver driver;
+	
+	public void logOutMethod()
+	{
+		
+	  
+	}
+}

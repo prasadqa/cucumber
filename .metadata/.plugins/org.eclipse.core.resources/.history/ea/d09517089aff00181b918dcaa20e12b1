@@ -1,0 +1,6 @@
+url = http://orangehrm.qedgetech.com
+
+
+browser = chrome
+implicitlywait = 20
+pageloadtimeout = 20

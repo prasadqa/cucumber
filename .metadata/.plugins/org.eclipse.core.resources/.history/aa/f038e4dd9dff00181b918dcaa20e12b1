@@ -1,0 +1,148 @@
+package StepDefination;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.orangeHRM.base.BaseFuntions;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+public class Navigations extends BaseFuntions 
+{
+	
+	@Before
+	public void lunchBrowser() throws Exception
+	{
+		initialization();
+	}
+	
+	@After
+	public void cloaseBrowser() throws Exception
+	{
+		tearDown();
+	}
+	
+	@Given("^user should login with valid credentials$")
+	public void user_should_login_with_valid_credentials() 
+	{
+		driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
+		
+	}
+
+	@When("^user is on home page$")
+	public void user_is_on_home_page() 
+	{
+		boolean result = driver.findElement(By.xpath("//a[@id='welcome']")).isDisplayed();//
+		Assert.assertTrue("user in admin home page", result);
+	}
+
+	@Then("^user click on admin module$")
+	public void user_click_on_admin_module()
+	{
+		driver.findElement(By.linkText("Admin")).click();
+		
+	}
+
+	@Then("^user verify admin page$")
+	public void user_verify_admin_page() throws Throwable 
+	{
+		boolean result = driver.findElement(By.xpath("//h1[contains(text(),'System Users')]")).isDisplayed();
+		Assert.assertTrue("user in admin home page", result);
+	}
+
+	@Then("^user click on PIM$")
+	public void user_click_on_PIM() 
+	{
+		driver.findElement(By.linkText("PIM")).click();
+	}
+
+	@Then("^user verify PIM page$")
+	public void user_verify_PIM_page() 
+	{
+		boolean result = driver.findElement(By.xpath("//h1[contains(text(),'Employee Information')]")).isDisplayed();
+		Assert.assertTrue("user in PIM page", result);
+	}
+
+	@Then("^user click on Leave page$")
+	public void user_click_on_Leave_page()  
+	{
+		driver.findElement(By.linkText("Leave")).click();
+	}
+
+	@Then("^user verify Leave page$")
+	public void user_verify_Leave_page() 
+	{
+		boolean result = driver.findElement(By.xpath("//h1[contains(text(),'Leave List')]")).isDisplayed();
+		Assert.assertTrue("user in Leave page", result);
+		
+	}
+
+	@Then("^user click on Time page$")
+	public void user_click_on_Time_page() 
+	{
+		driver.findElement(By.linkText("Time")).click();
+	}
+
+	@Then("^user verify Time page$")
+	public void user_verify_Time_page()  
+	{
+		boolean result = driver.findElement(By.xpath("//h1[contains(text(),'Select Employee')]")).isDisplayed();
+		Assert.assertTrue("user in Time page", result);
+	}
+
+	@Then("^user click on Recruitment page$")
+	public void user_click_on_Recruitment_page() 
+	{
+		driver.findElement(By.linkText("Recruitment")).click();
+	}
+
+	@Then("^user verify Recruitment page$")
+	public void user_verify_Recruitment_page() 
+	{
+		boolean result = driver.findElement(By.xpath("//h1[contains(text(),'Candidates')]")).isDisplayed();
+		Assert.assertTrue("user in Recruitment page", result);
+	    
+	}
+
+	/*@Then("^user click on Performance page$")
+	public void user_click_on_Performance_page() 
+	{
+		driver.findElement(By.linkText("Performance")).click(); 
+	}
+
+	@Then("^user verify Performance page$")
+	public void user_verify_Performance_page() 
+	{
+		boolean result = driver.findElement(By.xpath("//h1[contains(text(),'Candidates')]")).isDisplayed();
+		Assert.assertTrue("user in Performance page", result);
+	}*/
+
+	@Then("^user click on Directory page$")
+	public void user_click_on_Directory_page() 
+	{
+		driver.findElement(By.linkText("Directory")).click();
+	}
+
+	@Then("^user verify Directory page$")
+	public void user_verify_Directory_page()  
+	{
+		boolean result = driver.findElement(By.xpath("//h1[contains(text(),'Search Directory')]")).isDisplayed();
+		Assert.assertTrue("user in Performance page", result);
+	}
+	
+
+
+	
+
+}

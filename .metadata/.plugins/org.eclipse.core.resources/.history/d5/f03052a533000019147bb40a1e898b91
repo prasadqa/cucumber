@@ -1,0 +1,24 @@
+package Runner;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+//\\Login.feature
+//\\Navigations.feature
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features = "D:\\SeleniumSamples\\CucumberFRWOHRM\\cucumberFRW\\src\\main\\java\\Feature",
+		glue = {"StepDefination"},
+		monochrome = true,
+		format = {"pretty","html:Test_output","json:json_output/cucumber.json","junit:junit_xml/cucumber.xml"},
+		strict = true,
+		dryRun = false
+	
+		
+		)
+//
+public class TestRunner 
+{
+	
+}

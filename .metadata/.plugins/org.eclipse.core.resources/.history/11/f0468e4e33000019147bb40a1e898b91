@@ -1,0 +1,6 @@
+url = http://primusbank.qedgetech.com/
+
+
+browser = chrome
+implicitlywait = 20
+pageloadtimeout = 30

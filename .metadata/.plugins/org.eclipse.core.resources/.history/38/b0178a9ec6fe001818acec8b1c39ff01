@@ -1,0 +1,12 @@
+Feature: All the navigations
+
+Scenario: Verufy all the navigation of the Orange HRM
+
+Given user should login with valid credentials
+When user is on home page
+Then user click on admin module
+Then user verify admin page
+Then user click on PIM
+Then user verify PIM page
+Then user click on  
+

@@ -1,0 +1,40 @@
+package com.orangeHRM.base;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.orangeHRM.Utills.Config;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseFuntions extends Config 
+{
+	WebDriver driver;
+	public void initialization(String browserName)
+	{
+		if(browserName.equalsIgnoreCase("chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver =  new ChromeDriver();
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+		else
+			if(browserName.equalsIgnoreCase("firefox"))
+			{
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				driver.manage().deleteAllCookies();
+				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			}
+		
+	}
+	
+	
+	
+}

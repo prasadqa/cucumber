@@ -1,0 +1,9 @@
+Feature: OHRM login feature
+
+Scenario: Verify login functionality 
+ Given user alredy on login page
+ When title of page is OrangeHRM
+ Then user enter username and Passsword
+ Then user clicks on login button
+ Then user on admin home page
+ 

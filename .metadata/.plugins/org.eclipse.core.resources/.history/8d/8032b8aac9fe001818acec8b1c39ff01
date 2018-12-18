@@ -1,0 +1,110 @@
+package StepDefination;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Navigations 
+{
+	@Given("^user should login with valid credentials$")
+	public void user_should_login_with_valid_credentials() 
+	{
+	    
+	}
+
+	@When("^user is on home page$")
+	public void user_is_on_home_page() 
+	{
+	    
+	}
+
+	@Then("^user click on admin module$")
+	public void user_click_on_admin_module()
+	{
+		
+	}
+
+	@Then("^user verify admin page$")
+	public void user_verify_admin_page() throws Throwable 
+	{
+		
+	}
+
+	@Then("^user click on PIM$")
+	public void user_click_on_PIM() 
+	{
+	    
+	}
+
+	@Then("^user verify PIM page$")
+	public void user_verify_PIM_page() {
+	    
+	 
+	}
+
+	@Then("^user click on Leave page$")
+	public void user_click_on_Leave_page()  
+	{
+	    
+	}
+
+	@Then("^user verify Leave page$")
+	public void user_verify_Leave_page() 
+	{
+	 
+		
+	}
+
+	@Then("^user click on Time page$")
+	public void user_click_on_Time_page() 
+	{
+	 
+		
+	}
+
+	@Then("^user verify Time page$")
+	public void user_verify_Time_page()  
+	{
+
+	}
+
+	@Then("^user click on Recruitment page$")
+	public void user_click_on_Recruitment_page() 
+	{
+	 
+		
+	}
+
+	@Then("^user verify Recruitment page$")
+	public void user_verify_Recruitment_page() 
+	{
+		
+	    
+	}
+
+	@Then("^user click on Performance page$")
+	public void user_click_on_Performance_page() 
+	{
+		
+	    
+	}
+
+	@Then("^user verify Performance page$")
+	public void user_verify_Performance_page() 
+	{
+	    
+	}
+
+	@Then("^user click on Directory page$")
+	public void user_click_on_Directory_page() 
+	{
+	    
+	}
+
+	@Then("^user verify Directory page$")
+	public void user_verify_Directory_page()  
+	{
+	
+	}
+
+}
